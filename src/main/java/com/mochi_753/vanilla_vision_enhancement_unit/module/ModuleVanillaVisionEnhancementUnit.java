@@ -40,6 +40,6 @@ public class ModuleVanillaVisionEnhancementUnit implements ICustomModule<ModuleV
 
     @Override
     public void changeMode(IModule<ModuleVanillaVisionEnhancementUnit> module, Player player, ItemStack stack, int shift, boolean displayChangeMessage) {
-        module.toggleEnabled(player, Component.translatable("module.vanilla_vision_enhancement"));
+        module.toggleEnabled(player, Component.translatable("module.vveu.vanilla_vision_enhancement"));
     }
 }

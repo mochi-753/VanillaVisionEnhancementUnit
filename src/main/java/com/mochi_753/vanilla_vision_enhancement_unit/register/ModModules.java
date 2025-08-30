@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 public class ModModules {
     public static final ModuleDeferredRegister MODULES = new ModuleDeferredRegister(VanillaVisionEnhancementUnit.MOD_ID);
     public static final ModuleRegistryObject<ModuleVanillaVisionEnhancementUnit> VANILLA_VISION_ENHANCEMENT_UNIT =
-            MODULES.register("vanilla_vision_enhancement_unit", ModuleVanillaVisionEnhancementUnit::new,
+            MODULES.register("vanilla_vision_enhancement", ModuleVanillaVisionEnhancementUnit::new,
                     () -> ModItems.VANILLA_VISION_ENHANCEMENT_UNIT.asItem(),
                     builder -> builder.maxStackSize(1).rarity(Rarity.RARE).handlesModeChange().rendersHUD().disabledByDefault());
 
