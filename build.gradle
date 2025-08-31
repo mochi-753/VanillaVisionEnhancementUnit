@@ -62,12 +62,13 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    compileOnly "mekanism:Mekanism:${mekanism_version}:api"
+    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:api")
+    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
 
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")// Mekanism
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")// Mekanism: Additions
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")// Mekanism: Generators
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")// Mekanism: Tools
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
+    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -92,10 +93,10 @@ tasks.named('jar', Jar).configure {
                 'Specification-Title'     : mod_id,
                 'Specification-Vendor'    : mod_authors,
                 'Specification-Version'   : '1',
-                'Implementation-Title'    : project.name,
-                'Implementation-Version'  : project.jar.archiveVersion,
-                'Implementation-Vendor'   : mod_authors,
-                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                'implementation-Title'    : project.name,
+                'implementation-Version'  : project.jar.archiveVersion,
+                'implementation-Vendor'   : mod_authors,
+                'implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 

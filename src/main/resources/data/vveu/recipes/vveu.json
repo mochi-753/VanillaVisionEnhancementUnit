@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mekanism:module_vision_enhancement_unit"
+    }
+  ],
+  "result": {
+    "item": "vveu:module_vanilla_vision_enhancement",
+    "count": 1
+  }
+}
