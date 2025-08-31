@@ -11,7 +11,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
@@ -40,6 +39,6 @@ public class ModuleVanillaVisionEnhancementUnit implements ICustomModule<ModuleV
 
     @Override
     public void changeMode(IModule<ModuleVanillaVisionEnhancementUnit> module, Player player, ItemStack stack, int shift, boolean displayChangeMessage) {
-        module.toggleEnabled(player, Component.translatable("module.vveu.vanilla_vision_enhancement"));
+        module.toggleEnabled(player, Component.translatable("module.vveu.vanilla_vision_enhancement_unit"));
     }
 }
